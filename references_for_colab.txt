@@ -1,0 +1,14 @@
+# Steps to download dataset in google colab:
+
+from google.colab import files
+
+# Upload the Kaggle API key file
+files.upload()
+
+!mkdir ~/.kaggle
+!mv kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+
+!kaggle datasets download -d adityajn105/flickr8k
+
+!unzip -q flickr8k.zip
